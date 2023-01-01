@@ -15,9 +15,9 @@ export default {
     },
     methods:  {
     },
-    async mounted() {
-        await this.$nextTick(() => this.$refs.focusMe.focus())
-    },
+    // async mounted() {
+    //     await this.$nextTick(() => this.$refs.focusMe.focus())
+    // },
 };
 </script>
 
