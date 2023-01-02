@@ -27,6 +27,13 @@ export default {
     <MobileNavBar/>
     <SearchBar/>
 
+    <div class="overflow-x-scroll px-4 flex justify-between items-center">
+        <h1 class="bg-[#D9D9D9] px-6 py-3 rounded-xl font-bold text-white text-lg">All</h1>
+        <h1 class="hover:bg-[#D9D9D9] hover:text-white text-sm hover:text-lg px-6 py-3 rounded-xl font-bold text-gray-400">Company</h1>
+        <h1 class="hover:bg-[#D9D9D9] hover:text-white text-sm hover:text-lg px-6 py-3 rounded-xl font-bold text-gray-400">Roles</h1>
+        <h1 class="hover:bg-[#D9D9D9] hover:text-white text-sm hover:text-lg px-6 py-3 rounded-xl font-bold text-gray-400">Latests</h1>
+    </div>
+
     <div class="columns-1 p-4 pb-24">
         <div class="w-full bg-[#EAEBEC] mb-6 rounded-xl p-4 flex space-x-4 items-center">
             <div class="h-28 w-28 bg-[#D9D9D9] rounded-xl shrink-0"></div>

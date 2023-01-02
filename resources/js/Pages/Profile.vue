@@ -24,12 +24,20 @@ export default {
 <template>
     <MobileNavBar />
 
-    <div class="bg-[#EAEBEC] px-4 py-8">
+    <div class="bg-[#EAEBEC] px-4 py-8 mb-6">
         <div class="flex items-center">
             <div class="w-40 h-40 bg-[#D9D9D9] rounded-xl">
 
             </div>
         </div>
+    </div>
+
+    <div class="overflow-x-scroll px-4 flex space-x-4 items-center">
+        <h1 class="bg-[#D9D9D9] px-6 py-3 rounded-xl font-bold text-white text-lg">Portfolio</h1>
+        <h1 class="hover:bg-[#D9D9D9] hover:text-white text-sm hover:text-lg px-6 py-3 rounded-xl font-bold text-gray-400">Skills</h1>
+        <h1 class="hover:bg-[#D9D9D9] hover:text-white text-sm hover:text-lg px-6 py-3 rounded-xl font-bold text-gray-400">Work</h1>
+        <h1 class="hover:bg-[#D9D9D9] hover:text-white text-sm hover:text-lg px-6 py-3 rounded-xl font-bold text-gray-400">Education</h1>
+        <h1 class="hover:bg-[#D9D9D9] hover:text-white text-sm hover:text-lg px-6 py-3 rounded-xl font-bold text-gray-400">Posts</h1>
     </div>
 
     <div class="columns-2 p-4 md:columns-3xs grow overflow-y-scroll pb-24">

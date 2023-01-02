@@ -7,7 +7,7 @@ export default {
     name: 'Hub',
     data() {
         return {
-            postFlowSingle: false,
+            postFlowSingle: true,
         };
     },
     components: {

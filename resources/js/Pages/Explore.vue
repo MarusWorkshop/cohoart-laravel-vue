@@ -27,6 +27,13 @@ export default {
     <MobileNavBar/>
     <SearchBar/>
 
+    <div class="overflow-x-scroll px-4 flex justify-between items-center">
+        <h1 class="bg-[#D9D9D9] px-6 py-3 rounded-xl font-bold text-white text-lg">All</h1>
+        <h1 class="hover:bg-[#D9D9D9] hover:text-white text-sm hover:text-lg px-6 py-3 rounded-xl font-bold text-gray-400">Events</h1>
+        <h1 class="hover:bg-[#D9D9D9] hover:text-white text-sm hover:text-lg px-6 py-3 rounded-xl font-bold text-gray-400">Creators</h1>
+        <h1 class="hover:bg-[#D9D9D9] hover:text-white text-sm hover:text-lg px-6 py-3 rounded-xl font-bold text-gray-400">Posts</h1>
+    </div>
+
     <div class="columns-2 p-4 md:columns-3xs grow overflow-y-scroll pb-24">
         <div class="relative mb-6 space-y-4 rounded-xl">
             <img class="rounded-xl" src="https://source.unsplash.com/random/1" />
