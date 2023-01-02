@@ -22,7 +22,7 @@ export default {
 </script>
 
 <template>
-    <div class="w-full h-24 p-4">
+    <div class="w-full h-20 p-4">
         <div class="w-full h-full rounded-xl bg-[#EAEBEC]">
             <input ref='focusMe' type="text" class="w-full h-full bg-transparent outline-none px-4" autofocus>
         </div>
