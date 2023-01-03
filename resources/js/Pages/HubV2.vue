@@ -19,7 +19,7 @@
                         <div class="flex items-center space-x-2 md:hidden" @click="changePostStructure">
                             <div class="h-4 w-8 rounded-xl border-4 border-gray-400" :class="{ 'bg-gray-400' : postFlowSingle }"></div>
                         </div>
-                        <div class="flex items-center space-x-2 md:hidden" @click="toggleMenu">
+                        <div class="flex items-center space-x-2" @click="toggleMenu">
                             <div class="h-4 w-8 rounded-xl border-4 border-gray-400" :class="{ 'bg-gray-400' : menuState }"></div>
                         </div>
                     </div>
