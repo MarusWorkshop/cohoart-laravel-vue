@@ -152,8 +152,112 @@
                 </div>
 
                 <div class="relative mb-6 rounded-xl space-y-4">
-                    <img class="rounded-xl" src="https://source.unsplash.com/random/10" />
-                    <div class="flex h-6 items-center justify-start space-x-2 md:h-12">
+                    <img class="rounded-xl" src="https://source.unsplash.com/random/12" />
+                    <div class="flex h-6 items-center justify-start space-x-2 md:h-10">
+                        <div class="flex h-full w-6 shrink-0 items-center justify-center overflow-hidden rounded-full md:w-10">
+                            <img class="h-full w-full object-cover" src="https://source.unsplash.com/random/2" />
+                        </div>
+                        <div class="text-gray-500">
+                            <h1 class="text-[8px] font-black">Iqmal Nazlan</h1>
+                            <h2 class="hidden text-sm md:block">Full-Stack developer</h2>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative mb-6 rounded-xl space-y-4">
+                    <img class="rounded-xl" src="https://source.unsplash.com/random/13" />
+                    <div class="flex h-6 items-center justify-start space-x-2 md:h-10">
+                        <div class="flex h-full w-6 shrink-0 items-center justify-center overflow-hidden rounded-full md:w-10">
+                            <img class="h-full w-full object-cover" src="https://source.unsplash.com/random/2" />
+                        </div>
+                        <div class="text-gray-500">
+                            <h1 class="text-[8px] font-black">Iqmal Nazlan</h1>
+                            <h2 class="hidden text-sm md:block">Full-Stack developer</h2>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative mb-6 rounded-xl space-y-4">
+                    <img class="rounded-xl" src="https://source.unsplash.com/random/14" />
+                    <div class="flex h-6 items-center justify-start space-x-2 md:h-10">
+                        <div class="flex h-full w-6 shrink-0 items-center justify-center overflow-hidden rounded-full md:w-10">
+                            <img class="h-full w-full object-cover" src="https://source.unsplash.com/random/2" />
+                        </div>
+                        <div class="text-gray-500">
+                            <h1 class="text-[8px] font-black">Iqmal Nazlan</h1>
+                            <h2 class="hidden text-sm md:block">Full-Stack developer</h2>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative mb-6 rounded-xl space-y-4">
+                    <img class="rounded-xl" src="https://source.unsplash.com/random/15" />
+                    <div class="flex h-6 items-center justify-start space-x-2 md:h-10">
+                        <div class="flex h-full w-6 shrink-0 items-center justify-center overflow-hidden rounded-full md:w-10">
+                            <img class="h-full w-full object-cover" src="https://source.unsplash.com/random/2" />
+                        </div>
+                        <div class="text-gray-500">
+                            <h1 class="text-[8px] font-black">Iqmal Nazlan</h1>
+                            <h2 class="hidden text-sm md:block">Full-Stack developer</h2>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative mb-6 rounded-xl space-y-4">
+                    <img class="rounded-xl" src="https://source.unsplash.com/random/16" />
+                    <div class="flex h-6 items-center justify-start space-x-2 md:h-10">
+                        <div class="flex h-full w-6 shrink-0 items-center justify-center overflow-hidden rounded-full md:w-10">
+                            <img class="h-full w-full object-cover" src="https://source.unsplash.com/random/2" />
+                        </div>
+                        <div class="text-gray-500">
+                            <h1 class="text-[8px] font-black">Iqmal Nazlan</h1>
+                            <h2 class="hidden text-sm md:block">Full-Stack developer</h2>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative mb-6 rounded-xl space-y-4">
+                    <img class="rounded-xl" src="https://source.unsplash.com/random/17" />
+                    <div class="flex h-6 items-center justify-start space-x-2 md:h-10">
+                        <div class="flex h-full w-6 shrink-0 items-center justify-center overflow-hidden rounded-full md:w-10">
+                            <img class="h-full w-full object-cover" src="https://source.unsplash.com/random/2" />
+                        </div>
+                        <div class="text-gray-500">
+                            <h1 class="text-[8px] font-black">Iqmal Nazlan</h1>
+                            <h2 class="hidden text-sm md:block">Full-Stack developer</h2>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative mb-6 rounded-xl space-y-4">
+                    <img class="rounded-xl" src="https://source.unsplash.com/random/18" />
+                    <div class="flex h-6 items-center justify-start space-x-2 md:h-10">
+                        <div class="flex h-full w-6 shrink-0 items-center justify-center overflow-hidden rounded-full md:w-10">
+                            <img class="h-full w-full object-cover" src="https://source.unsplash.com/random/2" />
+                        </div>
+                        <div class="text-gray-500">
+                            <h1 class="text-[8px] font-black">Iqmal Nazlan</h1>
+                            <h2 class="hidden text-sm md:block">Full-Stack developer</h2>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative mb-6 rounded-xl space-y-4">
+                    <img class="rounded-xl" src="https://source.unsplash.com/random/19" />
+                    <div class="flex h-6 items-center justify-start space-x-2 md:h-10">
+                        <div class="flex h-full w-6 shrink-0 items-center justify-center overflow-hidden rounded-full md:w-10">
+                            <img class="h-full w-full object-cover" src="https://source.unsplash.com/random/2" />
+                        </div>
+                        <div class="text-gray-500">
+                            <h1 class="text-[8px] font-black">Iqmal Nazlan</h1>
+                            <h2 class="hidden text-sm md:block">Full-Stack developer</h2>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative mb-6 rounded-xl space-y-4">
+                    <img class="rounded-xl" src="https://source.unsplash.com/random/20" />
+                    <div class="flex h-6 items-center justify-start space-x-2 md:h-10">
                         <div class="flex h-full w-6 shrink-0 items-center justify-center overflow-hidden rounded-full md:w-10">
                             <img class="h-full w-full object-cover" src="https://source.unsplash.com/random/2" />
                         </div>
