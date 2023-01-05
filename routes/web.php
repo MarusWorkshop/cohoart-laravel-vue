@@ -16,9 +16,7 @@ use Illuminate\Support\Facades\Route;
 
 //Route::get('/', [MainController::class, 'hub']);
 //Route::get('/profile', [MainController::class, 'profile']);
+
 Route::inertia('/','Hub');
-Route::inertia('/explore','Explore');
-Route::inertia('/events','Events');
-Route::inertia('/jobs','Jobs');
 Route::inertia('/portfolio','Portfolio');
 

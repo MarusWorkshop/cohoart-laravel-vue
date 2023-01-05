@@ -7,3 +7,5 @@ div {
     page-break-inside: avoid;
     break-inside: avoid;
 }
+
+html, body { height: 100% }
