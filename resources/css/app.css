@@ -2,10 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+
 div {
     -webkit-column-break-inside: avoid;
     page-break-inside: avoid;
     break-inside: avoid;
 }
 
-html, body { height: 100% }
+html {
+    height: -webkit-fill-available;
+}
+
+body {
+
+    height: -webkit-fill-available;
+}
