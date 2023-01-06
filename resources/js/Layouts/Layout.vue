@@ -44,8 +44,9 @@ export default {
             this.$refs.focusMe.focus()
         },
         setDocHeight() {
-            document.documentElement.style.setProperty('--vh', `${window.innerHeight/100}px`);
-            this.viewPortHeight = `${window.innerHeight/100}px`;
+            let vh = window.innerHeight * 0.01;
+            this.viewPortHeight = `${vh}px`;
+            // document.documentElement.style.setProperty('--vh', `${vh}px`);
         },
     },
 };
@@ -99,7 +100,6 @@ export default {
                     <!--                            <path d="M172.907 25.9999V7.90494H165.732V1.49994H188.342V7.90494H181.167V25.9999H172.907Z" fill="black"/>-->
                     <!--                        </svg>-->
                     <!--                    </div>-->
-
                     <div class="w-12 h-12 md:w-14 md:h-14 shrink-0 rounded-full flex justify-center items-center bg-[#EEF1F6] ring-2 ring-black ring-offset-2">
                         <img class="rounded-full object-cover w-[100%] h-[100%]" src="https://source.unsplash.com/random/65" />
                     </div>
@@ -135,10 +135,6 @@ export default {
 
 <style>
 :root {
-    --vh: v-bind(viewPortHeight);
-}
-
-html, body {
-    height: calc(var(--vh, 1vh) * 100);
+    --vh : v-bind(viewPortHeight);
 }
 </style>

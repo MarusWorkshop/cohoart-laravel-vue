@@ -9,7 +9,6 @@
     @vite('resources/js/app.js')
 
     @inertiaHead
-
 </head>
 <body class="antialiased overflow-x-clip">
     @inertia
