@@ -8,6 +8,7 @@ export default {
             filterDrawerState:false,
             postFlowSingle: false,
             navMenuState:false,
+            viewPortHeight: '',
         };
     },
     components: {
@@ -18,6 +19,13 @@ export default {
     computed: {
     },
     watch:    {
+    },
+    mounted() {
+        window.addEventListener("resize", this.setDocHeight);
+        this.setDocHeight();
+    },
+    unmounted() {
+        window.removeEventListener("resize", this.setDocHeight);
     },
     methods:  {
         hubToExplore() {
@@ -34,7 +42,11 @@ export default {
         },
         focusSearch() {
             this.$refs.focusMe.focus()
-        }
+        },
+        setDocHeight() {
+            document.documentElement.style.setProperty('--vh', `${window.innerHeight/100}px`);
+            this.viewPortHeight = `${window.innerHeight/100}px`;
+        },
     },
 };
 </script>
@@ -120,3 +132,13 @@ export default {
         </div>
     </div>
 </template>
+
+<style>
+:root {
+    --vh: v-bind(viewPortHeight);
+}
+
+html, body {
+    height: calc(var(--vh, 1vh) * 100);
+}
+</style>
