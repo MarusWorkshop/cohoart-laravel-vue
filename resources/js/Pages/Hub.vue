@@ -42,9 +42,6 @@ export default {
     name: 'Hub',
     data() {
         return {
-            postFlowSingle: false,
-            menuState:false,
-            filterDrawerState:false,
         };
     },
     components: {
@@ -57,15 +54,6 @@ export default {
     watch:    {
     },
     methods:  {
-        hubToExplore() {
-            this.$inertia.get('/explore')
-        },
-        changePostStructure() {
-            this.postFlowSingle = !this.postFlowSingle;
-        },
-        toggleMenu() {
-            this.menuState = !this.menuState;
-        },
     },
 };
 </script>

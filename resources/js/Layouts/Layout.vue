@@ -1,5 +1,46 @@
+<script>
+import { Link } from '@inertiajs/inertia-vue3'
+
+export default {
+    name: 'Layout',
+    data() {
+        return {
+            filterDrawerState:false,
+            postFlowSingle: false,
+            navMenuState:false,
+        };
+    },
+    components: {
+        Link,
+    },
+    props:    {
+    },
+    computed: {
+    },
+    watch:    {
+    },
+    methods:  {
+        hubToExplore() {
+            this.$inertia.get('/explore')
+        },
+        changePostStructure() {
+            this.postFlowSingle = !this.postFlowSingle;
+        },
+        toggleMenu() {
+            this.navMenuState = !this.navMenuState;
+        },
+        toggleFilterDrawer() {
+            this.filterDrawerState = !this.filterDrawerState;
+        },
+        focusSearch() {
+            this.$refs.focusMe.focus()
+        }
+    },
+};
+</script>
+
 <template>
-    <div class="group flex h-screen w-screen overflow-x-clip bg-[#EEF1F6]" :class="{ 'py-14':navMenuState }" @click.self="toggleMenu">
+    <div class="group flex h-screen w-screen overflow-x-clip bg-[#EEF1F6] md:py-0" :class="{ 'py-14':navMenuState }" @click.self="toggleMenu">
         <div class="flex h-full shrink-0 items-center justify-end transition-all" :class="{ 'md:w-72 w-60':navMenuState, 'w-0':!navMenuState }" @click.self="toggleMenu">
             <div class="flex w-full flex-col">
                 <Link href="/" class="border-r-8 border-[#000000] py-4 pl-4 border-opacity-0 opacity-50 hover:opacity-100 text-[#000000] hover:border-opacity-100 font-sans text-2xl md:text-4xl font-bold hover:text-[#000000]" :class="{ 'opacity-100 border-opacity-100 text-[#000000]':$page.component === 'Hub'}">
@@ -19,9 +60,9 @@
                         <svg class="w-1/2 h-1/2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg>
                     </div>
 
-                    <div class="w-full h-12 bg-[#EEF1F6] rounded-full flex">
+                    <div class="w-full h-12 md:h-14 bg-[#EEF1F6] rounded-full flex">
                         <div class="w-12 h-12 md:w-14 md:h-14 shrink-0 rounded-l-full flex justify-center items-center">
-                            <div class="rounded-l-full w-full h-full flex justify-center items-center" v-if="!filterDrawerState">
+                            <div @click="focusSearch" class="rounded-l-full w-full h-full flex justify-center items-center" v-if="!filterDrawerState">
                                 <svg class="w-1/2 h-1/2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352c79.5 0 144-64.5 144-144s-64.5-144-144-144S64 128.5 64 208s64.5 144 144 144z"/></svg>
                             </div>
                             <div @click="toggleFilterDrawer" class="rounded-l-full w-full h-full flex justify-center items-center" v-if="filterDrawerState">
@@ -32,7 +73,7 @@
                             </div>
                         </div>
 
-                        <input ref='focusMe' type="text" class="w-full h-full bg-transparent outline-none pr-4 rounded-r-full" @focus="toggleFilterDrawer" autofocus>
+                        <input ref='focusMe' type="text" class="w-full h-full md:h-14 bg-transparent outline-none pr-4 rounded-r-full" @focus="toggleFilterDrawer" autofocus>
                     </div>
 
                     <!--                    <div class="w-full h-10 flex justify-center items-center">-->
@@ -79,41 +120,3 @@
         </div>
     </div>
 </template>
-
-<script>
-import { Link } from '@inertiajs/inertia-vue3'
-
-export default {
-    name: 'Layout',
-    data() {
-        return {
-            filterDrawerState:false,
-            postFlowSingle: false,
-            navMenuState:false,
-        };
-    },
-    components: {
-        Link,
-    },
-    props:    {
-    },
-    computed: {
-    },
-    watch:    {
-    },
-    methods:  {
-        hubToExplore() {
-            this.$inertia.get('/explore')
-        },
-        changePostStructure() {
-            this.postFlowSingle = !this.postFlowSingle;
-        },
-        toggleMenu() {
-            this.navMenuState = !this.navMenuState;
-        },
-        toggleFilterDrawer() {
-            this.filterDrawerState = !this.filterDrawerState;
-        },
-    },
-};
-</script>
