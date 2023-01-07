@@ -53,7 +53,7 @@ export default {
 </script>
 
 <template>
-    <div class="group flex h-screen w-screen overflow-x-clip bg-[#EEF1F6] md:py-0" :class="{ 'py-14':navMenuState }" @click.self="toggleMenu">
+    <div class="group flex h-[--vh] w-screen overflow-x-clip bg-[#EEF1F6] md:py-0" :class="{ 'py-14':navMenuState }" @click.self="toggleMenu">
         <div class="flex h-full shrink-0 items-center justify-end transition-all" :class="{ 'md:w-72 w-60':navMenuState, 'w-0':!navMenuState }" @click.self="toggleMenu">
             <div class="flex w-full flex-col">
                 <Link href="/" class="border-r-8 border-[#000000] py-4 pl-4 border-opacity-0 opacity-50 hover:opacity-100 text-[#000000] hover:border-opacity-100 font-sans text-2xl md:text-4xl font-bold hover:text-[#000000]" :class="{ 'opacity-100 border-opacity-100 text-[#000000]':$page.component === 'Hub'}">
