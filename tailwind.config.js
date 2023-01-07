@@ -6,7 +6,11 @@ module.exports = {
         "./resources/**/*.vue",
     ],
     theme: {
-        extend: {},
+        extend: {
+            height: {
+                'trueH': 'calc(var(--vh, 100vh))',
+            },
+        },
     },
     plugins: [],
 }
