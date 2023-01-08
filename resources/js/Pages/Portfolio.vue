@@ -152,7 +152,7 @@
 </template>
 
 <script>
-import Layout from "../Layouts/LayoutOld.vue";
+import Layout from "../Layouts/Layout.vue";
 
 export default {
     name: 'Portfolio',

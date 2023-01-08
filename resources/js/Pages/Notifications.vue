@@ -13,7 +13,7 @@
                             </div>
                             <div class="text-gray-500">
                                 <h1 class="text-[8px] font-black hidden md:block">{{ post.userRole }}</h1>
-                                <p class="text-sm">{{ post.userName }}</p>
+                                <h2 class="text-sm">{{ post.userName }}</h2>
                             </div>
                         </div>
 
@@ -29,7 +29,7 @@
 <script>
 import Layout from "../Layouts/Layout.vue";
 export default {
-    name: 'Hub',
+    name: 'Notifications',
     data() {
         return {
             mockPosts: [],
