@@ -1,5 +1,5 @@
 <template>
-    <div class="flex p-4 sticky top-0 z-10 bg-white">
+    <div class="flex p-4 sticky top-0 z-10 bg-white space-x-2">
 
         <div class="w-full h-12 bg-[#EEF1F6] rounded-full flex " :class="{ 'ring-2 ring-black ring-offset-2':filterDrawerState }">
             <div class="w-12 h-12 shrink-0 rounded-l-full flex justify-center items-center">
@@ -17,7 +17,7 @@
             <input ref='focusMe' type="text" class="w-full h-full bg-transparent outline-none pr-4 rounded-r-full" @focus="toggleFilterDrawer">
         </div>
 
-        <div class="w-12 h-12 shrink-0 rounded-full flex justify-center items-center" @click="changePostStructure">
+        <div class="w-12 h-12 shrink-0 rounded-full flex justify-center items-center bg-[#EEF1F6] md:hidden" @click="changePostStructure">
             <!--                        <svg class="w-1/2 h-1/2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg>-->
             <svg v-if="postFlowSingle" class="w-1/2 h-1/2" xmlns="http://www.w3.org/2000/svg" width="18" height="19" viewBox="0 0 18 19" fill="none">
                 <rect x="1" y="1" width="16" height="10" rx="1" stroke="black" stroke-width="2"/>
@@ -35,50 +35,24 @@
 
     <slot :postFlowSingle="postFlowSingle" />
 
-<!--    <div class="grid grid-cols-5 bg-[#EEF1F6] w-full fixed bottom-0 z-10 px-4">-->
-<!--        <div class="border-black flex justify-center items-center bg-[#EEF1F6] p-4">-->
-<!--            <Link href="/portfolio" class="w-12 h-12 shrink-0 rounded-full flex justify-center items-center bg-[#EEF1F6] ring-2 ring-black ring-offset-2">-->
-<!--                <img class="rounded-full object-cover w-[100%] h-[100%]" src="https://source.unsplash.com/random/65" />-->
-<!--            </Link>-->
-<!--        </div>-->
-<!--        <div class="border-black flex justify-center items-center bg-[#EEF1F6] p-4">-->
-<!--            <Link href="/portfolio" class="w-12 h-12 shrink-0 rounded-full flex justify-center items-center bg-[#EEF1F6] ring-2 ring-black ring-offset-2">-->
-<!--                <img class="rounded-full object-cover w-[100%] h-[100%]" src="https://source.unsplash.com/random/65" />-->
-<!--            </Link>-->
-<!--        </div>-->
-<!--        <div class="border-black flex justify-center items-center bg-[#EEF1F6] p-4">-->
-<!--            <Link href="/portfolio" class="w-12 h-12 shrink-0 rounded-full flex justify-center items-center bg-[#EEF1F6] ring-2 ring-black ring-offset-2">-->
-<!--                <img class="rounded-full object-cover w-[100%] h-[100%]" src="https://source.unsplash.com/random/65" />-->
-<!--            </Link>-->
-<!--        </div>-->
-<!--        <div class="border-black flex justify-center items-center bg-[#EEF1F6] p-4">-->
-<!--            <Link href="/portfolio" class="w-12 h-12 shrink-0 rounded-full flex justify-center items-center bg-[#EEF1F6] ring-2 ring-black ring-offset-2">-->
-<!--                <img class="rounded-full object-cover w-[100%] h-[100%]" src="https://source.unsplash.com/random/65" />-->
-<!--            </Link>-->
-<!--        </div>-->
-<!--        <div class="border-black flex justify-center items-center bg-[#EEF1F6] p-4">-->
-<!--            <Link href="/portfolio" class="w-12 h-12 shrink-0 rounded-full flex justify-center items-center bg-[#EEF1F6] ring-2 ring-black ring-offset-2">-->
-<!--                <img class="rounded-full object-cover w-[100%] h-[100%]" src="https://source.unsplash.com/random/65" />-->
-<!--            </Link>-->
-<!--        </div>-->
-<!--    </div>-->
+    <div class="fixed bottom-0 z-10 w-full flex md:justify-center md:py-4">
+        <div class="flex justify-between items-center bg-white w-full p-4 md:rounded-full md:w-96 md:shadow-md">
+            <Link href="/" class="w-12 h-12 rounded-full" :class="{ 'ring-2 ring-black ring-offset-2':$page.component === 'Hub'}">
+                <img class="rounded-full object-cover w-[100%] h-[100%]" src="https://source.unsplash.com/random/65" />
+            </Link>
 
-    <div class="flex justify-between items-center bg-white w-full fixed bottom-0 z-10 p-4 ">
-        <Link href="/" class="w-12 h-12 rounded-full" :class="{ 'ring-2 ring-black ring-offset-2':$page.component === 'Hub'}">
-            <img class="rounded-full object-cover w-[100%] h-[100%]" src="https://source.unsplash.com/random/65" />
-        </Link>
+            <Link href="/jobs" class="w-12 h-12 rounded-full" :class="{ 'ring-2 ring-black ring-offset-2':$page.component === 'Jobs'}">
+                <img class="rounded-full object-cover w-[100%] h-[100%]" src="https://source.unsplash.com/random/65" />
+            </Link>
 
-        <Link href="/jobs" class="w-12 h-12 rounded-full" :class="{ 'ring-2 ring-black ring-offset-2':$page.component === 'Jobs'}">
-            <img class="rounded-full object-cover w-[100%] h-[100%]" src="https://source.unsplash.com/random/65" />
-        </Link>
+            <Link href="/forum" class="w-12 h-12 rounded-full" :class="{ 'ring-2 ring-black ring-offset-2':$page.component === 'Forum'}">
+                <img class="rounded-full object-cover w-[100%] h-[100%]" src="https://source.unsplash.com/random/65" />
+            </Link>
 
-        <Link href="/forum" class="w-12 h-12 rounded-full" :class="{ 'ring-2 ring-black ring-offset-2':$page.component === 'Forum'}">
-            <img class="rounded-full object-cover w-[100%] h-[100%]" src="https://source.unsplash.com/random/65" />
-        </Link>
-
-        <Link href="/profile" class="w-12 h-12 rounded-full" :class="{ 'ring-2 ring-black ring-offset-2':$page.component === 'Profile'}">
-            <img class="rounded-full object-cover w-[100%] h-[100%]" src="https://source.unsplash.com/random/65" />
-        </Link>
+            <Link href="/profile" class="w-12 h-12 rounded-full" :class="{ 'ring-2 ring-black ring-offset-2':$page.component === 'Profile'}">
+                <img class="rounded-full object-cover w-[100%] h-[100%]" src="https://source.unsplash.com/random/65" />
+            </Link>
+        </div>
     </div>
 </template>
 
