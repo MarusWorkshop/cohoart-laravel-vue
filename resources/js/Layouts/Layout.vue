@@ -1,5 +1,5 @@
 <template>
-    <div class="flex p-4 sticky top-0 z-10 bg-white space-x-2">
+    <div class="flex p-4 sticky top-0 z-10 bg-white space-x-2" v-if="$page.component !== 'Portfolio'">
 
         <div class="w-full h-12 bg-[#EEF1F6] rounded-full flex " :class="{ 'ring-2 ring-black ring-offset-2':filterDrawerState }">
             <div class="w-12 h-12 shrink-0 rounded-l-full flex justify-center items-center">

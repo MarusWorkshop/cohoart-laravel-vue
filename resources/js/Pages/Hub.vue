@@ -48,7 +48,7 @@ export default {
     watch:    {
     },
     methods:  {
-        createMockPosts() {
+        async createMockPosts() {
             let a = [];
             for (let i = 0; i <= 25; i++) {
                 if (i < 24){

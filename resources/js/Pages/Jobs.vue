@@ -60,7 +60,7 @@ export default {
     watch:    {
     },
     methods:  {
-        createMockJobs() {
+        async createMockJobs() {
             let a = [];
             for (let i = 0; i <= 25; i++) {
                 if (i < 24){
