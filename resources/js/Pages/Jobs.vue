@@ -1,22 +1,34 @@
 <template>
-    <Layout v-slot="{postFlowSingle}">
+    <Layout>
 
         <div class="pb-24">
             <div class="p-4 flex flex-col space-y-2">
-                <ul class="md:columns-3xs grow overflow-y-scroll" :class="{ 'columns-1' : postFlowSingle, 'columns-2' : !postFlowSingle }">
-                    <li v-if="mockPosts !== []" v-for="post in mockPosts" class="relative mb-6 space-y-4 rounded-xl">
+                <ul class="columns-1 md:columns-2xs lg:columns-3 xl:columns-4 overflow-y-scroll">
+<!--                    <li v-if="mockJobs !== []" v-for="job in mockJobs" class="relative mb-6 space-y-4 rounded-xl">-->
 
-                        <img class="rounded-xl" :src="post.postImage" />
-                        <div class="flex h-6 md:h-10 items-center justify-start space-x-2">
-                            <div class="flex h-full w-6 md:w-10 shrink-0 items-center justify-center overflow-hidden rounded-full">
-                                <img class="h-full w-full object-cover" :src="post.profileImage" />
-                            </div>
-                            <div class="text-gray-500">
-                                <h1 class="text-[8px] font-black hidden md:block">{{ post.userRole }}</h1>
-                                <p class="text-sm">{{ post.userName }}</p>
+<!--                        <img class="rounded-xl" :src="job.companyImage" />-->
+<!--                        <div class="flex h-6 md:h-10 items-center justify-start space-x-2">-->
+<!--                            <div class="flex h-full w-6 md:w-10 shrink-0 items-center justify-center overflow-hidden rounded-full">-->
+<!--                                <img class="h-full w-full object-cover" :src="job.companyImage" />-->
+<!--                            </div>-->
+<!--                            <div class="text-gray-500">-->
+<!--                                <h1 class="text-[8px] font-black hidden md:block">{{ job.jobTitle }}</h1>-->
+<!--                                <h2 class="text-sm">{{ job.jobTitle }}</h2>-->
+<!--                            </div>-->
+<!--                        </div>-->
+
+<!--                    </li>-->
+
+                    <li v-if="mockJobs !== []" v-for="job in mockJobs" class="rounded-xl bg-[#EEF1F6] p-4 mb-6">
+                        <div class="flex  justify-start items-center w-full space-x-4">
+                            <img class="rounded-xl w-20 h-20 shrink-0 object-cover" :src="job.companyImage" />
+                            <div>
+                                <h1 class="text-[8px] font-black">{{ job.jobTitle }}</h1>
+                                <p class="text-sm">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                </p>
                             </div>
                         </div>
-
                     </li>
 
                 </ul>
@@ -29,10 +41,10 @@
 <script>
 import Layout from "../Layouts/Layout.vue";
 export default {
-    name: 'Hub',
+    name: 'Jobs',
     data() {
         return {
-            mockPosts: [],
+            mockJobs: [],
         };
     },
     components: {
@@ -43,28 +55,24 @@ export default {
     computed: {
     },
     mounted() {
-        this.createMockPosts()
+        this.createMockJobs()
     },
     watch:    {
     },
     methods:  {
-        createMockPosts() {
+        createMockJobs() {
             let a = [];
             for (let i = 0; i <= 25; i++) {
                 if (i < 24){
-                    let postI = 'https://source.unsplash.com/random/' + (Math.floor(Math.random() * 10000) + 1)
-                    let profileI = 'https://source.unsplash.com/random/' + (Math.floor(Math.random() * 10000) + 1)
-                    let userR = '' + this.generateName()
-                    let userN = '' + this.generateName()
-                    a.push({ postImage: postI, profileImage: profileI, userRole: userR, userName: userN });
+                    let companyI = 'https://source.unsplash.com/random/' + (Math.floor(Math.random() * 10000) + 1)
+                    let jobT = '' + this.generateName()
+                    a.push({ companyImage: companyI, jobTitle: jobT});
                 }
                 else if (i === 25) {
-                    let postI = 'https://source.unsplash.com/random/' + (Math.floor(Math.random() * 10000) + 1)
-                    let profileI = 'https://source.unsplash.com/random/' + (Math.floor(Math.random() * 10000) + 1)
-                    let userR = '' + this.generateName()
-                    let userN = '' + this.generateName()
-                    a.push({ postImage: postI, profileImage: profileI, userRole: userR, userName: userN });
-                    this.mockPosts = a;
+                    let companyI = 'https://source.unsplash.com/random/' + (Math.floor(Math.random() * 10000) + 1)
+                    let jobT = '' + this.generateName()
+                    a.push({ companyImage: companyI, jobTitle: jobT});
+                    this.mockJobs = a;
                 }
             }
         },
