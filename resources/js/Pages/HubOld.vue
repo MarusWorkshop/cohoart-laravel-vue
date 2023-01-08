@@ -1,8 +1,7 @@
 <template>
     <Layout v-slot="{postFlowSingle}">
-
         <div class="pb-24">
-            <div class="p-4 flex flex-col space-y-2">
+            <div class="px-4 flex flex-col space-y-2">
                 <div class="md:columns-3xs grow overflow-y-scroll" :class="{ 'columns-1' : postFlowSingle, 'columns-2' : !postFlowSingle }">
                     <div class="relative mb-6 rounded-xl space-y-4">
                         <img class="rounded-xl" src="https://source.unsplash.com/random/55"/>
@@ -163,12 +162,12 @@
                 </div>
             </div>
         </div>
-
     </Layout>
 </template>
 
 <script>
-import Layout from "../Layouts/Layout.vue";
+import Layout from "../Layouts/LayoutOld.vue";
+
 export default {
     name: 'Hub',
     data() {

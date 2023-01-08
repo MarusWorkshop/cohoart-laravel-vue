@@ -19,7 +19,7 @@
         });
     </script>
 </head>
-<body class="antialiased overflow-x-clip h-trueH">
+<body class="antialiased overflow-x-clip h-trueH relative">
     @inertia
 </body>
 </html>
