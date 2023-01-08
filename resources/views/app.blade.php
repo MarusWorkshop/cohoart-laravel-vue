@@ -9,6 +9,15 @@
     @vite('resources/js/app.js')
 
     @inertiaHead
+
+    <script>
+        // We listen to the resize event
+        window.addEventListener('resize', () => {
+            // We execute the same script as before
+            let vh = window.innerHeight * 0.01;
+            document.documentElement.style.setProperty('--vh', `${vh * 100}px`);
+        });
+    </script>
 </head>
 <body class="antialiased overflow-x-clip h-trueH">
     @inertia

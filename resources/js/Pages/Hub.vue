@@ -1,8 +1,8 @@
 <template>
-    <Layout v-slot="{filterDrawerState}">
+    <Layout v-slot="{postFlowSingle}">
         <div class="pb-24">
             <div class="px-4 flex flex-col space-y-2">
-                <div class="md:columns-3xs grow overflow-y-scroll" :class="{ 'columns-1' : filterDrawerState, 'columns-2' : !filterDrawerState }">
+                <div class="md:columns-3xs grow overflow-y-scroll" :class="{ 'columns-1' : postFlowSingle, 'columns-2' : !postFlowSingle }">
                     <div class="relative mb-6 rounded-xl space-y-4">
                         <img class="rounded-xl" src="https://source.unsplash.com/random/55"/>
                         <div class="flex h-6 items-center justify-start space-x-2 md:h-10">
